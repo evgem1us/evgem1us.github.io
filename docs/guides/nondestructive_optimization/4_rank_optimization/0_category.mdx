@@ -1,0 +1,84 @@
+---
+slug: .
+---
+
+import DocCardList from '@theme/DocCardList';
+
+# Оптимизация характеристик ранга производительности
+
+## Описание
+
+В разделе приведены инструкции по оптимизации до Poor/Medium/Good/Excellent аватара.
+
+Система оценки производительности аватаров в VRChat учитывает далеко не все (аниматоры, шейдеры, прочие вещи), а описываемое считает для худшего случая (когда все включено). Про это сказано и [на официальной странице документации ранга производительности](https://creators.vrchat.com/avatars/avatar-performance-ranking-system/#avatar-performance-ranks---value-maximums-per-rank) в самом начале. Но, ИМХО, если автор адекватный чел и смог сделать медиум/гуд аватар, то и не в отслеживаемых рангом производительности вещах скорее всего должно быть все нормально (аватару good бублика с fur-шейдером привет!). Когда-нибудь VRChat научится отслеживать и такие вещи, но имеем что имеем, а наличие хотя бы такой системы - это гораздо лучше, чем ничего. Хотите оптимизироваться полностью по хардкору - профайлер в юнити вам в помощь и ~~сто якорей в ж...~~ сто аватаров на сцену, а дальше только менять настройки всего подряд в аватаре и смотреть насколько изменяется фпс на вашей системе.
+
+На 19.08.25 на [сайте VRChat'а](https://creators.vrchat.com/avatars/avatar-performance-ranking-system/#avatar-performance-ranks---value-maximums-per-rank) для рангов производительности назначены следующие характеристики (названия на сайте и в игре немного отличаются в паре мест, в таблице используются названия из игры):
+
+## Лимиты для ПК-версии
+
+| Ранг аватара                   | Excellent         | Good        | Medium      | Poor        |
+| ------------------------------ | ----------------- | ----------- | ----------- | ----------- |
+| Triangles                      | 32000             | 70000       | 70000       | 70000       |
+| Bounds                         | 2.5 x 2.5 x 2.5 м | 4 х 4 х 4 м | 5 х 6 х 5 м | 5 х 6 х 5 м |
+| Texture Memory                 | 40 мБ             | 75 мБ       | 110 мБ      | 150 мБ      |
+| Skinned Meshes                 | 1                 | 2           | 8           | 16          |
+| Basic Meshes                   | 4                 | 8           | 16          | 32          |
+| Material Slots                 | 4                 | 8           | 16          | 32          |
+| PhysBone Components            | 4                 | 8           | 16          | 32          |
+| PhysBone Transforms            | 16                | 64          | 128         | 256         |
+| PhysBone Colliders             | 4                 | 8           | 16          | 32          |
+| PhysBone Collision Check Count | 32                | 128         | 256         | 512         |
+| Contact Count                  | 8                 | 16          | 24          | 32          |
+| Constraints                    | 100               | 250         | 300         | 350         |
+| Constraint Depth               | 20                | 50          | 80          | 100         |
+| Animators                      | 1                 | 4           | 16          | 32          |
+| Bones                          | 75                | 150         | 256         | 400         |
+| Lights                         | 0                 | 0           | 0           | 1           |
+| Particle Systems               | 0                 | 4           | 8           | 16          |
+| Total Max Particles            | 0                 | 300         | 1000        | 2500        |
+| Mesh Particle Triangles        | 0                 | 1000        | 2000        | 5000        |
+| Particle Trails                | False             | False       | True        | True        |
+| Particle Collisions            | False             | False       | True        | True        |
+| Trail Renderers                | 1                 | 2           | 4           | 8           |
+| Cloth Meshes                   | 0                 | 1           | 1           | 1           |
+| Cloth Max Vertices             | 0                 | 50          | 100         | 200         |
+| Colliders Count                | 0                 | 1           | 8           | 8           |
+| Rigidbodies                    | 0                 | 1           | 8           | 8           |
+| Audio Sources                  | 1                 | 4           | 8           | 8           |
+
+## Лимиты для Android-версии
+
+| Ранг аватара                    | Excellent         | Good        | Medium      | Poor        |
+| ------------------------------- | ----------------- | ----------- | ----------- | ----------- |
+| Triangles                       | 7500              | 10000       | 15000       | 20000       |
+| Bounds                          | 2.5 x 2.5 x 2.5 м | 4 x 4 x 4 м | 5 x 6 x 5 м | 5 x 6 x 5 м |
+| Texture Memory                  | 10 мБ             | 18 мБ       | 25 мБ       | 40 мБ       |
+| Skinned Meshes                  | 1                 | 1           | 2           | 2           |
+| Basic Meshes                    | 1                 | 1           | 2           | 2           |
+| Material Slots                  | 1                 | 1           | 2           | 4           |
+| Animators                       | 1                 | 1           | 1           | 2           |
+| Bones                           | 75                | 90          | 150         | 150         |
+| PhysBone Components             | 0                 | 4           | 6           | 8           |
+| PhysBone Transforms             | 0                 | 16          | 32          | 64          |
+| PhysBone Colliders              | 0                 | 4           | 8           | 16          |
+| PhysBone Collision Check Count  | 0                 | 16          | 32          | 64          |
+| Contact Count                   | 2                 | 4           | 8           | 16          |
+| Constraints                     | 30                | 60          | 120         | 150         |
+| Constraint Depth                | 5                 | 15          | 35          | 50          |
+| Particle Systems                | 0                 | 0           | 0           | 2           |
+| Total Max Particles             | 0                 | 0           | 0           | 200         |
+| Mesh Particle Triangles         | 0                 | 0           | 0           | 400         |
+| Particle Trails                 | False             | False       | False       | True        |
+| Particle Collisions             | False             | False       | False       | True        |
+| Trail Renderers                 | 0                 | 0           | 0           | 1           |
+| Line Renderers                  | 0                 | 0           | 0           | 1           |
+| Lights                          | 0                 | 0           | 0           | 0           |
+| Cloth Meshes                    | 0                 | 0           | 0           | 0           |
+| Cloth Max Vertices              | 0                 | 0           | 0           | 0           |
+| Colliders Count                 | 0                 | 0           | 0           | 0           |
+| Rigidbodies                     | 0                 | 0           | 0           | 0           |
+| Audio Sources                   | 0                 | 0           | 0           | 0           |
+
+## Содержание
+
+<DocCardList />
