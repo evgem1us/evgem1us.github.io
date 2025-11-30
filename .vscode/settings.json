@@ -1,0 +1,9 @@
+{
+    "cSpell.language": "en,ru",
+    "cSpell.words": [
+        "аниматоре"
+    ],
+    "markdown.copyFiles.destination": {
+        "/docs/**/*": "/static/img/${documentRelativeDirName}/${documentBaseName}/"
+    }
+}

@@ -1,0 +1,80 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.featureImg {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.featureImgWide {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.featureButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.brandButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff8a00 0%, #ff5f6d 100%);
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.brandButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  opacity: 0.96;
+}
+
+.brandButton:active {
+  transform: translateY(0);
+}
+
+.discord {
+  background: #5865f2;
+}
+
+.telegram {
+  background: #229ed9;
+}
+
+.vrchat {
+  background: #008389;
+}
+
+.youtube {
+  background: #ff0033;
+}
+
+.tiktok {
+  background: #000;
+}
+
+.coub {
+  background: linear-gradient(135deg, #1f6bff 0%, #0044d4 100%);
+}
