@@ -33,7 +33,11 @@ const config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -57,10 +61,13 @@ const config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
+          onUntruncatedBlogPosts: 'ignore',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn'
-        }
+        },
+        theme: {
+          customCss: './src/css/custom.css',
+        },
       }),
     ],
   ],
@@ -69,6 +76,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/maid_unity.png',
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: 'EVGeM1us',
         logo: {

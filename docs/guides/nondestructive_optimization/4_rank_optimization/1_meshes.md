@@ -60,7 +60,7 @@ Skinned Meshes будут автоматически объединены при
    ![Восстановление меша из префаба](/img/guides/nondestructive_optimization/image-94.png)
 
 
-### Замена Skinned Mesh на Basic Mesh
+### Замена Skinned Mesh на Basic Mesh {#skinned-to-basic}
 
 Если меш не деформируется костями, но его нужно выключать отдельно от остальной части аватара, то его можно перевести из `Skinned Mesh` в `Basic Mesh`. Это освободит один слот `Skinned Meshes`, но количество материалов останется неизменным. Пример такого меша - кепка.
 
