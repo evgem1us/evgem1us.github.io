@@ -4,6 +4,10 @@ sidebar_position: 7
 
 # Список изменений
 
+## v0.2.2
+
+- Рекомендация использовать ALCOM вынесена в [отдельный раздел](2_prepare.md#alcom) и выделена цветом
+
 ## v0.2.1
 
 - Для [компонента "AAO Remove Mesh by Mask"](4_rank_optimization/6_triangles/2_remove.md#aao-remove-mesh-by-mask):
