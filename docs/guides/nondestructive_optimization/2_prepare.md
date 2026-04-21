@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # Подготовка к работе
 
+Используйте [указанную VRChat-ом версию Unity](https://creators.vrchat.com/sdk/upgrade/current-unity-version/) ([2022.3.22f1](https://unity.com/ru/releases/editor/whats-new/2022.3.22f1) на 21.04.26г), обновляйте все пакеты до последних версий в ALCOM/Creator Companion. 
+
 ## Особенности недеструктивной работы с аватарами {#nondestructive}
 
 VRChat SDK отображает ранг производительности для аватаров, находящихся на сцене в текущий момент, и не учитывает недеструктивные изменения, вносимые Modular Avatar и прочими пакетами.
@@ -33,9 +35,6 @@ VRChat SDK отображает ранг производительности д
 
 Пример предупреждений:  
 ![Предупреждения NDMF Console](/img/guides/nondestructive_optimization/image-79.png)
-
-Используйте последнюю рекомендуемую VRChat-ом версию Unity, обновите все пакеты до последних версий в ALCOM/Creator Companion. 
-
 
 ## Полезные ссылки
 

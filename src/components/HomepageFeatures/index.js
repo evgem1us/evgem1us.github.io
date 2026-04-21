@@ -28,7 +28,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Мейд-кафе Koi No Niwa',
+    title: 'Мейд-кафе в VRChat',
     img: require('@site/static/img/koinoniwa.png').default,
     fullWidthImg: true,
     links: [
@@ -43,7 +43,7 @@ const FeatureList = [
     ],
     description: (
       <>
-        Отыгрываю мейдочку в{' '}
+        Отыгрываю мейдочку, являюсь администратором и картоделом в{' '}
         <a
           href="https://vrchat.com/home/group/grp_7dda67ae-8c4f-442d-9117-208adc9a9bf2"
           target="_blank"
